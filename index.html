@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <i>
+        <h1>Current DATE, MONTH And YEAR</h1>
+        <h6>2. Write a JavaScript program to get the current date. 
+            Expected Output :
+            mm-dd-yyyy, mm/dd/yyyy or dd-mm-yyyy, dd/mm/yyyy</h6>
+    </i>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <p id="p4"></p>
+    <script>
+
+        var today = new Date();
+        var dd = today.getDay();
+        var mm = today.getMonth();
+        var yy = today.getFullYear();
+        var daylist = ["Sunday", "Monday", "Tuesday", "Wednesday ", "Thursday", "Friday", "Saturday"];
+        var monthlist = ["January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"];
+        var date1 = monthlist[mm] + " - " + daylist[dd] + " - " + yy;
+        var date2 = monthlist[mm] + " / " + daylist[dd] + " / " + yy;
+        var date3 = daylist[dd] + " - " + monthlist[mm] + " - " + yy;
+        var date4 = daylist[dd] + " / " + monthlist[mm] + " / " + yy;
+        document.getElementById("p1").innerHTML = date1;
+        document.getElementById("p2").innerHTML = date2;
+        document.getElementById("p3").innerHTML = date3;
+        document.getElementById("p4").innerHTML = date4;
+
+    </script>
+</body>
+
+</html>
